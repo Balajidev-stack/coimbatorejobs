@@ -93,7 +93,7 @@ const OpportunitiesCarousel = () => {
               <h3 className="card-title">{opp.title}</h3>
               <p className="card-company">{opp.company}</p>
               <p className="card-description">{opp.description}</p>
-              <Link href="/job-listing" className="card-link">
+              <Link href="/job-list" className="card-link">
                 Explore Job
               </Link>
             </div>

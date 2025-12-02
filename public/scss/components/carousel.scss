@@ -82,11 +82,11 @@
 
 .carousel-nav {
   position: absolute;
-  bottom: 60px;
+  bottom: 180px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 20px;
+  gap: 450px;
   z-index: 10;
 }
 
@@ -125,7 +125,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 60, 255, 0.3);
   border: none;
   cursor: pointer;
   transition: all 300ms ease;
@@ -168,8 +168,8 @@
   }
 
   .carousel-nav {
-    gap: 15px;
-    bottom: 50px;
+    gap: 320px;
+    bottom: 180px;
   }
 
   .carousel-btn {
@@ -224,8 +224,8 @@
   }
 
   .carousel-nav {
-    gap: 12px;
-    bottom: 20px;
+    gap: 250px;
+    bottom: 160px;
   }
 
   .carousel-btn {
@@ -267,8 +267,8 @@
   }
 
   .carousel-nav {
-    gap: 10px;
-    bottom: 18px;
+    gap: 350px;
+    bottom: 180px;
   }
 
   .carousel-btn {
@@ -293,7 +293,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   .carousel-container {
     height: 340px;
     padding: 12px 0;
@@ -322,6 +322,52 @@
     padding: 5px 10px;
   }
 
+  .carousel-nav {
+    gap: 280px;
+    bottom: 160px;
+  }
+  
+  .carousel-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 320px) {
+  .carousel-container {
+    height: 340px;
+    padding: 12px 0;
+  }
+
+  .carousel-card {
+    width: 160px;
+    height: 260px;
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 13px;
+  }
+
+  .card-company {
+    font-size: 10px;
+  }
+
+  .card-description {
+    font-size: 9px;
+  }
+
+  .card-link {
+    font-size: 8px;
+    padding: 5px 10px;
+  }
+
+  .carousel-nav {
+    gap: 250px;
+    bottom: 160px;
+  }
+  
   .carousel-btn {
     width: 28px;
     height: 28px;

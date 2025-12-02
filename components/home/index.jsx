@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Block from "../block/Block";
-import Block4 from "../block/Block4";
-import FeaturedBlock from "../block/FeaturedBlock";
+import Pricing from "../pricing/Pricing";
 import Blog from "../blog/Blog";
 import LoginPopup from "../common/form/login/LoginPopup";
 import Partner2 from "../common/partner/Partner2";
 import MobileMenu from "../header/MobileMenu";
 import Hero8 from "../hero/hero-8";
-import JobFeatured6 from "../job-featured/JobFeatured6";
+import JobFeaturedSlider from "../job-featured/JobFeaturedSlider";
 import TopCompany3 from "../top-company/TopCompany3";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -56,7 +55,7 @@ const index = () => {
       <section className="job-section-four alternate">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2>Featured Jobs</h2>
+            <h2>Job Openings</h2>
             <div className="text">
               Know your worth and find the job that qualify your life
             </div>
@@ -64,7 +63,7 @@ const index = () => {
           {/* End .sec-title */}
 
           <div className="row" data-aos="fade-up">
-            <JobFeatured6 />
+            <JobFeaturedSlider />
           </div>
           {/* End .row */}
 
@@ -77,8 +76,20 @@ const index = () => {
       </section>
       {/* <!-- End Job Section --> */}
 
-      <Block4 />
-      {/* <!-- End Jobseeker Section --> */}
+      <section className="pricing-section">
+        <div className="auto-container">
+          <div className="sec-title text-center">
+            <h2>Pricing Packages</h2>
+            <div className="text">
+              Lorem ipsum dolor sit amet elit, sed do eiusmod tempor.
+            </div>
+          </div>
+          {/* End title */}
+          <Pricing />
+          {/* End .{/* <!--Pricing Tabs--> */}
+        </div>
+      </section>
+      {/* <!-- End Pricing Section --> */}
 
       <section className="top-companies">
         <div className="auto-container">
@@ -128,3 +139,5 @@ const index = () => {
 };
 
 export default index;
+
+

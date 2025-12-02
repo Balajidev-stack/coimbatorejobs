@@ -1,0 +1,131 @@
+.job-slider-wrapper {
+  position: relative;
+}
+
+.job-slider-viewport {
+  overflow: hidden;
+}
+
+.job-slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.job-slide {
+  flex: 0 0 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.slider-style .inner-box {
+  min-height: 220px;
+}
+
+.job-slider-controls .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.job-slider-controls .prev {
+  left: 12px;
+}
+
+.job-slider-controls .next {
+  right: 12px;
+}
+
+.job-slider-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.job-slider-indicators .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1ced4;
+  border: none;
+  cursor: pointer;
+}
+
+.job-slider-indicators .indicator.active {
+  background: #1F8268;
+}
+
+@media (min-width: 768px) {
+  .job-slide {
+    padding: 20px;
+  }
+}
+.job-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  min-width: 100%;
+  max-width: 100%;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 400ms ease;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.job-block-single {
+  width: 420px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  color: #222;
+}
+
+.job-other-info { list-style: none; padding: 0; margin: 0 0 8px 0; display:flex; gap:8px; flex-wrap:wrap }
+.company-logo img { border-radius:8px }
+.company-name { display:block; font-weight:600; margin-top:6px }
+.job-block-single h4 { margin:12px 0 6px }
+.job-block-single .location { color:#666 }
+
+.slider-nav { position: absolute; bottom: 70px; left:50%; transform:translateX(-50%); display:flex; gap:12px; z-index:20 }
+.slider-nav .prev, .slider-nav .next { width:44px; height:44px; border-radius:50%; background:rgba(0,0,0,0.6); color:#fff; border:none; cursor:pointer }
+
+.slider-indicators { position:absolute; bottom:22px; left:50%; transform:translateX(-50%); display:flex; gap:8px }
+.dot { width:10px; height:10px; border-radius:50%; background:rgba(0,0,0,0.2); border:none }
+.dot.active { background:rgba(0,0,0,0.7); width:28px; border-radius:6px }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .job-block-single { width: 360px }
+}
+@media (max-width: 600px) {
+  .job-block-single { width: 280px; padding:16px }
+  .slider-nav { bottom:60px }
+  .slider-indicators { bottom:14px }
+}

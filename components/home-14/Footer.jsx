@@ -17,7 +17,7 @@ const Footer = () => {
                     <Image
                       width={154}
                       height={50}
-                      src="/images/logo.svg"
+                      src="/images/coimbatorejobs_logo.png"
                       alt="brand"
                     />
                   </a>
