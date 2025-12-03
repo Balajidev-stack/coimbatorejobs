@@ -36,7 +36,7 @@ const Header = () => {
               <div className="logo">
                 <Link href="/">
                   <Image
-                    width={154}
+                    width={130}
                     height={50}
                     src="/images/coimbatorejobs_logo.png"
                     alt="brand"

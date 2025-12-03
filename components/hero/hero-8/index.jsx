@@ -10,7 +10,7 @@ const index = () => {
           <Image
             width={952}
             height={942}
-            src="/images/resource/banner-img-9.png"
+            src="/images/resource/banner-img-10.png"
             alt="banner image"
           />
         </figure>
@@ -26,9 +26,9 @@ const index = () => {
                 data-aso-delay="500"
                 data-aos="fade-up"
               >
-                <h3>Find Candidate</h3>
+                <h3>Looking for Jobs?</h3>
                 <div className="text">
-                  Jobs & Job search. Find jobs in global. Executive jobs & work.
+                  Jobs & Job search. Find jobs in Coimbatore. Executive jobs & work.
                   Employment
                 </div>
               </div>

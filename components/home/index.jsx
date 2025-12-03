@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Block from "../block/Block";
 import Pricing from "../pricing/Pricing";
-import Blog from "../blog/Blog";
 import LoginPopup from "../common/form/login/LoginPopup";
 import Partner2 from "../common/partner/Partner2";
 import MobileMenu from "../header/MobileMenu";
@@ -76,19 +75,19 @@ const index = () => {
       </section>
       {/* <!-- End Job Section --> */}
 
-      <section className="pricing-section">
+      {/* <section className="pricing-section">
         <div className="auto-container">
           <div className="sec-title text-center">
             <h2>Pricing Packages</h2>
             <div className="text">
               Lorem ipsum dolor sit amet elit, sed do eiusmod tempor.
             </div>
-          </div>
+          </div> */}
           {/* End title */}
-          <Pricing />
+          {/* <Pricing /> */}
           {/* End .{/* <!--Pricing Tabs--> */}
-        </div>
-      </section>
+        {/* </div>
+      </section> */}
       {/* <!-- End Pricing Section --> */}
 
       <section className="top-companies">
@@ -115,22 +114,6 @@ const index = () => {
         </div>
       </section>
       {/* <!-- End Top Companies --> */}
-
-      <section className="news-section style-two">
-        <div className="auto-container">
-          <div className="sec-title text-center">
-            <h2>Recent News Articles</h2>
-            <div className="text">
-              Fresh job related news content posted each day.
-            </div>
-          </div>
-          {/* End ."sec-title */}
-          <div className="row" data-aos="fade-up">
-            <Blog />
-          </div>
-        </div>
-      </section>
-      {/* <!-- End News Section --> */}
 
       <Footer />
       {/* <!-- End Main Footer --> */}

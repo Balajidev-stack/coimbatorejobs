@@ -11,7 +11,10 @@ const Partner2 = () => {
     slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1200,
+    autoplaySpeed: 0,
+    speed: 5000,
+    infinite: true,
+    cssEase: "linear",
 
     responsive: [
       {
@@ -75,7 +78,7 @@ const Partner2 = () => {
                 <Image
                   width={91}
                   height={40}
-                  src={`/images/index-11/clients/${item.imgNumber}.svg`}
+                  src={`/images/index-11/clients/${item.imgNumber}.png`}
                   alt="brand"
                 />
               </a>

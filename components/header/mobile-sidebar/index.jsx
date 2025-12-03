@@ -92,50 +92,50 @@ const Index = () => {
             }
 
             // Submenu items (Pages)
-            return (
-              <SubMenu
-                label={item.label}
-                key={item.label}
-              >
-                {item.items.map((menuItem, i) => {
-                  // Pages sub-items
-                  if (!menuItem.items) {
-                    return (
-                      <MenuItem
-                        key={i}
-                        onClick={() => router.push(menuItem.routePath)}
-                        className={
-                          isActiveLink(menuItem.routePath, usePathname())
-                            ? "menu-active-link"
-                            : ""
-                        }
-                      >
-                        {menuItem.name}
-                      </MenuItem>
-                    );
-                  }
+            // return (
+            //   <SubMenu
+            //     label={item.label}
+            //     key={item.label}
+            //   >
+            //     {item.items.map((menuItem, i) => {
+            //       // Pages sub-items
+            //       if (!menuItem.items) {
+            //         return (
+            //           <MenuItem
+            //             key={i}
+            //             onClick={() => router.push(menuItem.routePath)}
+            //             className={
+            //               isActiveLink(menuItem.routePath, usePathname())
+            //                 ? "menu-active-link"
+            //                 : ""
+            //             }
+            //           >
+            //             {menuItem.name}
+            //           </MenuItem>
+            //         );
+            //       }
 
-                  // Shop submenu
-                  return (
-                    <SubMenu label={menuItem.name} key={i}>
-                      {menuItem.items.map((shopItem, j) => (
-                        <MenuItem
-                          key={j}
-                          onClick={() => router.push(shopItem.routePath)}
-                          className={
-                            isActiveLink(shopItem.routePath, usePathname())
-                              ? "menu-active-link"
-                              : ""
-                          }
-                        >
-                          {shopItem.name}
-                        </MenuItem>
-                      ))}
-                    </SubMenu>
-                  );
-                })}
-              </SubMenu>
-            );
+            //       // Shop submenu
+            //       return (
+            //         <SubMenu label={menuItem.name} key={i}>
+            //           {menuItem.items.map((shopItem, j) => (
+            //             <MenuItem
+            //               key={j}
+            //               onClick={() => router.push(shopItem.routePath)}
+            //               className={
+            //                 isActiveLink(shopItem.routePath, usePathname())
+            //                   ? "menu-active-link"
+            //                   : ""
+            //               }
+            //             >
+            //               {shopItem.name}
+            //             </MenuItem>
+            //           ))}
+            //         </SubMenu>
+            //       );
+            //     })}
+            //   </SubMenu>
+            // );
           })}
         </Menu>
       </Sidebar>

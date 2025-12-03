@@ -2,21 +2,11 @@ import Link from "next/link";
 import CopyrightFooter from "../footer/common-footer/CopyrightFooter";
 import FooterApps2 from "../footer/FooterApps2";
 import FooterContent3 from "../footer/FooterContent3";
-import SearchForm2 from "../footer/SearchForm2";
 import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="main-footer style-five">
-      <div className="newsletter-form" data-aos="fade-up">
-        <div className="sec-title text-center">
-          <h2>Subscribe Our Newsletter</h2>
-          <div className="text">We don’t send spam so don’t worry.</div>
-        </div>
-        <SearchForm2 />
-      </div>
-      {/* End .newsletter-form */}
-
       <div className="auto-container">
         <div className="widgets-section" data-aos="fade-up">
           <div className="row">
@@ -27,7 +17,7 @@ const Footer = () => {
                     <Image
                       width={154}
                       height={50}
-                      src="/images/Superio_logo.png"
+                      src="/images/coimbatorejobs_logo.png"
                       alt="brand"
                     />
                   </Link>

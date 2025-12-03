@@ -46,7 +46,7 @@ const OpportunitiesCarousel = () => {
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % opportunities.length);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [autoplay, opportunities.length]);
@@ -65,14 +65,14 @@ const OpportunitiesCarousel = () => {
 
   const getCardPosition = (index) => {
     const diff = (index - currentIndex + opportunities.length) % opportunities.length;
-    // Left cards
-    if (diff === 3) return { scale: 0.68, zIndex: 1, offset: -240 };
-    if (diff === 4) return { scale: 0.78, zIndex: 2, offset: -120 };
+    // Left cards (closer together)
+    if (diff === 3) return { scale: 0.72, zIndex: 1, offset: -100 };
+    if (diff === 4) return { scale: 0.85, zIndex: 2, offset: -50 };
     // Center card (current - large)
     if (diff === 0) return { scale: 1, zIndex: 3, offset: 0 };
-    // Right cards
-    if (diff === 1) return { scale: 0.78, zIndex: 2, offset: 120 };
-    if (diff === 2) return { scale: 0.68, zIndex: 1, offset: 240 };
+    // Right cards (closer together)
+    if (diff === 1) return { scale: 0.85, zIndex: 2, offset: 50 };
+    if (diff === 2) return { scale: 0.72, zIndex: 1, offset: 100 };
     return { scale: 0, zIndex: -1, offset: 0 };
   };
 

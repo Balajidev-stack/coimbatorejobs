@@ -45,7 +45,7 @@ const HeaderNavContent = () => {
           {/* End Candidates */}
 
           {/* Pages dropdown */}
-          <li className={`dropdown`}>
+          {/* <li className={`dropdown`}>
             <span>Pages</span>
             <ul>
               <li className="dropdown">
@@ -96,7 +96,7 @@ const HeaderNavContent = () => {
                 <Link href="/404">404</Link>
               </li>
             </ul>
-          </li>
+          </li> */}
           {/* End Pages menu items */}
         </ul>
       </nav>
