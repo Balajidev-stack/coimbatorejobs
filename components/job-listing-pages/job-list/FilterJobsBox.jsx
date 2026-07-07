@@ -4,6 +4,7 @@
 
 import Link from "next/link";
 import jobs from "../../../data/job-featured";
+import { getJobUrl } from "../../../utils/jobSlug";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addCategory,
@@ -126,7 +127,7 @@ const FilterJobsBox = () => {
               <Image width={50} height={49} src={item.logo} alt="item brand" />
             </span>
             <h4>
-              <Link href={`/job-single/${item.id}`}>{item.jobTitle}</Link>
+              <Link href={getJobUrl(item)}>{item.jobTitle}</Link>
             </h4>
 
             <ul className="job-info">

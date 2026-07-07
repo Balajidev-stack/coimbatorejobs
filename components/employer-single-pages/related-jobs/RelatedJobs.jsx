@@ -1,5 +1,6 @@
 import Link from "next/link";
 import jobs from "../../../data/job-featured";
+import { getJobUrl } from "../../../utils/jobSlug";
 import Image from "next/image";
 
 const RelatedJobs = () => {
@@ -13,7 +14,7 @@ const RelatedJobs = () => {
                 <Image width={50} height={49} src={item.logo} alt="resource" />
               </span>
               <h4>
-                <Link href={`/job-single-v1/${item.id}`}>{item.jobTitle}</Link>
+                <Link href={getJobUrl(item)}>{item.jobTitle}</Link>
               </h4>
 
               <ul className="job-info">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import recentJobApplied from "../../../../../data/job-featured";
+import { getJobUrl } from "../../../../../utils/jobSlug";
 import Image from "next/image";
 
 const JobApplied = () => {
@@ -18,7 +19,7 @@ const JobApplied = () => {
                 />
               </span>
               <h4>
-                <Link href={`/job-single-v1/${item.id}`}>{item.jobTitle}</Link>
+                <Link href={getJobUrl(item)}>{item.jobTitle}</Link>
               </h4>
 
               <ul className="job-info">

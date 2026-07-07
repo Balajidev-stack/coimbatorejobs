@@ -1,5 +1,6 @@
 import Link from "next/link";
 import jobs from "../../../../../data/job-featured.js";
+import { getJobUrl } from "../../../../../utils/jobSlug";
 import Image from "next/image.js";
 
 const JobListingsTable = () => {
@@ -52,7 +53,7 @@ const JobListingsTable = () => {
                             />
                           </span>
                           <h4>
-                            <Link href={`/job-single-v3/${item.id}`}>
+                            <Link href={getJobUrl(item)}>
                               {item.jobTitle}
                             </Link>
                           </h4>
