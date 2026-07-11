@@ -5,6 +5,7 @@
 import Link from "next/link";
 import jobs from "../../../data/job-featured";
 import { getJobUrl } from "../../../utils/jobSlug";
+import { formatSalary } from "../../../utils/formatSalary";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addCategory,
@@ -146,7 +147,8 @@ const FilterJobsBox = () => {
               </li>
               {/* time info */}
               <li>
-                <span className="icon flaticon-money"></span> {item.salary}
+                <span className="icon flaticon-money"></span>{" "}
+                {formatSalary(item)}
               </li>
               {/* salary info */}
             </ul>

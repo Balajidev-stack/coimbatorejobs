@@ -1,4 +1,7 @@
 import jobs from "@/data/job-featured";
+import { buildJobMetadata } from "@/utils/buildJobMetadata";
+import { buildJobJsonLd } from "@/utils/buildJobJsonLd";
+import { formatSalary } from "@/utils/formatSalary";
 import LoginPopup from "@/components/common/form/login/LoginPopup";
 import FooterDefault from "@/components/footer/common-footer";
 import DefaulHeader from "@/components/header/DefaulHeader";
@@ -15,20 +18,24 @@ import Image from "next/image";
 export function generateMetadata({ params }) {
   const id = params.id;
   const company = jobs.find((item) => item.id == id) || jobs[0];
-  const jobTitle = company?.jobTitle || "Job Opportunity";
-
-  return {
-    title: `${jobTitle} || Coimbatore Jobs - Job Board React NextJS Template`,
-    description: `${jobTitle} at ${company?.company || "Coimbatore Jobs"} - Coimbatore Jobs - Job Board React NextJS Template`,
-  };
+  return buildJobMetadata(company);
 }
 
 const JobSingleDynamicV3 = ({ params }) => {
   const id = params.id;
   const company = jobs.find((item) => item.id == id) || jobs[0];
 
+  const jobJsonLd = buildJobJsonLd(company);
+
   return (
     <>
+      {jobJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jobJsonLd) }}
+        />
+      )}
+
       {/* <!-- Header Span --> */}
       <span className="header-span"></span>
 
@@ -71,7 +78,7 @@ const JobSingleDynamicV3 = ({ params }) => {
                           {/* time info */}
                           <li>
                             <span className="icon flaticon-money"></span>{" "}
-                            {company?.salary}
+                            {formatSalary(company)}
                           </li>
                           {/* salary info */}
                         </ul>
@@ -95,7 +102,7 @@ const JobSingleDynamicV3 = ({ params }) => {
 
                 <div className="job-overview-two">
                   <h4>Job Description</h4>
-                  <JobOverView2 />
+                  <JobOverView2 job={company} />
                 </div>
                 {/* <!-- job-overview-two --> */}
 
